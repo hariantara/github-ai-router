@@ -1,0 +1,42 @@
+{
+  "name": "github-ai-router",
+  "version": "0.1.0",
+  "description": "A TypeScript router for GitHub AI models with automatic fallback and retry logic",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github",
+    "ai",
+    "router",
+    "typescript",
+    "fallback",
+    "retry"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/github-ai-router.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/github-ai-router/issues"
+  },
+  "homepage": "https://github.com/yourusername/github-ai-router#readme",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
