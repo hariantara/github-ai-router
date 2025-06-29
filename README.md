@@ -21,10 +21,16 @@ const router = new GithubAIRouter({
   ]
 });
 
+// Basic usage
 const res = await router.chat([
   { role: "user", content: "Hello AI!" }
 ]);
 console.log(res.choices[0].message.content);
+
+// Enable streaming mode
+const streamRes = await router.chat([
+  { role: "user", content: "Stream this!" }
+], true); // Pass 'true' as the second argument to enable streaming
 ```
 
 ## Features
@@ -52,6 +58,7 @@ Sends a chat request to the configured models with automatic fallback.
 
 - `messages`: Array of chat messages with role and content
 - `stream`: Optional boolean to enable streaming mode (default: false)
+  - If `true`, the response will be streamed (if supported by the model)
 
 Returns the response from the first successful model, or throws an error if all models fail.
 
