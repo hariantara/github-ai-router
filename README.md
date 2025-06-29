@@ -1,14 +1,23 @@
 # GitHub AI Router
 
-A TypeScript router for GitHub AI models with automatic fallback and retry logic. Automatically switches between models when a request fails or hits rate limits.
+A TypeScript router for GitHub AI models with automatic fallback and retry logic. Automatically switches between models when a request fails or hits rate limits. Perfect for building robust AI applications with multiple model support.
 
-## Installation
+## 🚀 Features
+
+- **Automatic Fallback**: Automatically tries the next model if one fails
+- **Rate Limit Handling**: Handles 429 (rate limit) errors gracefully
+- **Server Error Recovery**: Retries on 5xx server errors
+- **TypeScript Support**: Full TypeScript support with type definitions
+- **Streaming Support**: Optional streaming mode for real-time responses
+- **Multiple AI Models**: Support for OpenAI GPT, Meta Llama, and other GitHub AI models
+
+## 📦 Installation
 
 ```bash
 npm install github-ai-router
 ```
 
-## Usage
+## 🛠️ Usage
 
 ```ts
 import { GithubAIRouter } from "github-ai-router";
@@ -33,15 +42,7 @@ const streamRes = await router.chat([
 ], true); // Pass 'true' as the second argument to enable streaming
 ```
 
-## Features
-
-- **Automatic Fallback**: Automatically tries the next model if one fails
-- **Rate Limit Handling**: Handles 429 (rate limit) errors gracefully
-- **Server Error Recovery**: Retries on 5xx server errors
-- **TypeScript Support**: Full TypeScript support with type definitions
-- **Streaming Support**: Optional streaming mode for real-time responses
-
-## Configuration
+## ⚙️ Configuration
 
 ```ts
 interface GithubAIRouterConfig {
@@ -50,7 +51,7 @@ interface GithubAIRouterConfig {
 }
 ```
 
-## API
+## 📚 API Reference
 
 ### `chat(messages: ChatMessage[], stream?: boolean)`
 
@@ -62,13 +63,23 @@ Sends a chat request to the configured models with automatic fallback.
 
 Returns the response from the first successful model, or throws an error if all models fail.
 
-## Error Handling
+## 🔧 Error Handling
 
 The router automatically handles:
 - **429 Rate Limit Errors**: Moves to the next model
 - **5xx Server Errors**: Moves to the next model
 - **Other Errors**: Throws immediately without trying other models
 
-## License
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
 
 MIT
+
+## 🔗 Links
+
+- [GitHub Repository](https://github.com/hariantara/github-ai-router)
+- [npm Package](https://www.npmjs.com/package/github-ai-router)
+- [Issues](https://github.com/hariantara/github-ai-router/issues)

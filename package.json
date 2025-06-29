@@ -18,18 +18,25 @@
     "router",
     "typescript",
     "fallback",
-    "retry"
+    "retry",
+    "chatgpt",
+    "openai",
+    "llama",
+    "ai-models",
+    "api-client",
+    "error-handling",
+    "rate-limiting"
   ],
-  "author": "",
+  "author": "Hariantara",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/github-ai-router.git"
+    "url": "git+https://github.com/hariantara/github-ai-router.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/github-ai-router/issues"
+    "url": "https://github.com/hariantara/github-ai-router/issues"
   },
-  "homepage": "https://github.com/yourusername/github-ai-router#readme",
+  "homepage": "https://github.com/hariantara/github-ai-router#readme",
   "dependencies": {
     "axios": "^1.6.0"
   },
